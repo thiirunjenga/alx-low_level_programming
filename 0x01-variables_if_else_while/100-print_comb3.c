@@ -1,33 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - Writes 00 - 99
- * @void: Empty parameter list for main.
- *
- * Description: Writes all unique combinations
- * of 2 numbers
- *
- * Return: 0 for success
-*/
+ * main - program that prints all possible different combinations of two digits
+ * Numbers must be separated by ,followed by a space
+ * The two digits must be different
+ * 01 and 10 are considered the same combination of the two digits 0 and 1
+ * Return: 0
+ */
+
 int main(void)
 {
-	int i, j;
-
-	for (i = '0'; i <= '9'; i++)
-	{
-		for (j = '0'; j <= '9'; j++)
-		{
-			if ((i < j) & (j <= '9'))
-			{
-				putchar(i);
-				putchar(j);
-				if ((j < '9') | (i < '8'))
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+int n1 = 48;
+int n2;
+int com = 44;
+while (n1 <= 57)
+{
+n2 = n1 + 1;
+while (n2 <= 57)
+{
+putchar(n1);
+putchar(n2);
+if (n1 != 56 || n2 != 57)
+{
+putchar(com);
+putchar(32);
+}
+n2 += 1;
+}
+n1 += 1;
+}
+putchar('\n');
+return (0);
+}
