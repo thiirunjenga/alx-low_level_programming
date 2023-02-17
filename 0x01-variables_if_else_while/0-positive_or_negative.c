@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlb.h>
+#include<time.h>
+/**
+ * main -program entry point
+ * Return: 0 if success
+ */
+int main(void){
+	int n;
+	srand(time(0));
+	n = rand() - RAND_MAX/2;
+	/*insert code here*/
+	if(n>0)
+	{
+	printf("%d is positive\n",n);
+	}
+	if(n<0)
+        {
+        printf("%d is negative\n",n);
+        }
+	if(n==0)
+        {
+        printf("%d is zero\n",n);
+        }
+	return (0);
+}
